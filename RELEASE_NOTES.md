@@ -1,5 +1,19 @@
 # Release Notes
 
+## v0.3 - 2026-03-19
+
+Updated the Dave Cloud Pod Advisor banner to a new ASCII design and applied it consistently to the README and agent behavior.
+
+### What changed
+
+- Added the new ASCII banner to the top of [README.md](/Users/stu2/Projects/dava-cva-agent/README.md).
+- Updated [README.md](/Users/stu2/Projects/dava-cva-agent/README.md) to `v0.3`.
+- Updated [skills/dave-cloud-pod-advisor/SKILL.md](/Users/stu2/Projects/dava-cva-agent/skills/dave-cloud-pod-advisor/SKILL.md) so the agent prints the new banner at the start of every user-facing response.
+
+### Changed summary
+
+This release standardizes the visible Dave Cloud Pod Advisor branding with a new banner and ensures both the repository documentation and the runtime agent output use the same ASCII header.
+
 ## v0.2 - 2026-03-19
 
 Expanded the Dave Cloud Pod Advisor package to document and register the additional installed specialist skills now available in the repository.
