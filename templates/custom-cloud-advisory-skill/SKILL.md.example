@@ -1,0 +1,27 @@
+---
+name: your-cloud-advisory-skill
+description: Custom cloud advisory extension for a specific domain such as FinOps, platform scorecards, data platform migration, cloud security posture, or industry-specific architecture guidance. Use when the request matches this specialty and Dave Cloud Pod Advisor would benefit from deeper domain input.
+---
+
+# Your Cloud Advisory Skill
+
+Describe the specialty this skill owns.
+
+## When to use
+
+- Domain or problem types this skill should handle
+- Signals that should trigger it
+- Constraints or environments it knows best
+
+## Workflow
+
+1. Clarify the specialist question.
+2. Apply the domain-specific lens.
+3. Return concise guidance that can be merged back into Dave Cloud Pod Advisor output.
+
+## Output
+
+- recommendation
+- rationale
+- risks
+- actions

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Endava Cloud Case Study Finder">
+  <rect width="256" height="256" rx="40" fill="#E1251B"/>
+  <circle cx="110" cy="112" r="48" fill="#fff"/>
+  <path d="M145 145l39 39" stroke="#fff" stroke-linecap="round" stroke-width="22"/>
+  <path d="M88 114h45M88 92h45M88 136h28" stroke="#E1251B" stroke-linecap="round" stroke-width="10"/>
+</svg>

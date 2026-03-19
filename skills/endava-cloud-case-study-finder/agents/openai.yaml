@@ -1,0 +1,10 @@
+interface:
+  display_name: "Endava Cloud Case Study Finder"
+  short_description: "Find Endava cloud case studies for advice"
+  icon_small: "./assets/endava-cloud-case-study-finder.svg"
+  icon_large: "./assets/endava-cloud-case-study-finder.svg"
+  brand_color: "#E1251B"
+  default_prompt: "Use $endava-cloud-case-study-finder to locate Endava cloud case studies or delivery precedents relevant to this recommendation."
+
+policy:
+  allow_implicit_invocation: true

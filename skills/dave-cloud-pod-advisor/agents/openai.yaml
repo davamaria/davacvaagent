@@ -1,0 +1,10 @@
+interface:
+  display_name: "Dave Cloud Pod Advisor"
+  short_description: "Endava cloud strategy and migration advisor"
+  icon_small: "./assets/dave-cloud-pod-advisor.svg"
+  icon_large: "./assets/dave-cloud-pod-advisor.svg"
+  brand_color: "#E1251B"
+  default_prompt: "Use $dave-cloud-pod-advisor to advise on a cloud platform, migration, or modernization decision and ground the answer in Endava delivery patterns."
+
+policy:
+  allow_implicit_invocation: true

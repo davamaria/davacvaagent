@@ -1,0 +1,8 @@
+interface:
+  display_name: "Your Cloud Advisory Skill"
+  short_description: "Custom cloud domain advisor"
+  brand_color: "#E1251B"
+  default_prompt: "Use $your-cloud-advisory-skill to provide specialist cloud advisory guidance for this request."
+
+policy:
+  allow_implicit_invocation: true
