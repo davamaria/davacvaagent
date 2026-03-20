@@ -10,7 +10,10 @@
 
 An Endava-branded Codex CLI agent package for cloud advisory work across platform engineering, landing zones, modernization, and large-scale enterprise migration programs.
 
-Current version: `v0.3`
+Current version: `v0.9`
+
+Latest release note:
+- [v0.9 - 2026-03-20](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v09---2026-03-20)
 
 ## What is included
 
@@ -22,8 +25,16 @@ Current version: `v0.3`
   - Supporting skill for grounding recommendations in Endava case studies and delivery precedents
 - `skills/`
   - Additional cloud, platform, Azure, AWS, modernization, and document-output skills that Dave can call when relevant
+- `delivery/`
+  - Source-controlled cloud blueprints and infrastructure code packages
 - `RELEASE_NOTES.md`
   - Versioned release history and changed summaries
+- `deliverables/output-selection-checklist.md`
+  - Checklist for generating all deliverables or only selected outputs
+- `templates/`
+  - Endava Word and PowerPoint templates for client-facing outputs
+- `prompts/templates/dave-cloud-pod-advisor-prompt-template.md`
+  - Clickable prompt template for high-quality agent requests
 
 ## Core capabilities
 
@@ -33,6 +44,18 @@ Current version: `v0.3`
 - Modernization planning for legacy and hybrid estates
 - Reliability, security, observability, and cost advisory
 - Endava case-study lookup for precedent-backed recommendations
+
+## Releases
+
+- [v0.9 - 2026-03-20](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v09---2026-03-20)
+- [v0.8 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v08---2026-03-19)
+- [v0.7 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v07---2026-03-19)
+- [v0.6 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v06---2026-03-19)
+- [v0.5 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v05---2026-03-19)
+- [v0.4 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v04---2026-03-19)
+- [v0.3 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v03---2026-03-19)
+- [v0.2 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v02---2026-03-19)
+- [v0.1 - 2026-03-19](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md#v01---2026-03-19)
 
 ## Install In Codex CLI
 
@@ -59,6 +82,10 @@ Restart Codex after installation so the skills are picked up cleanly.
 If you want Dave to use the additional skills in this repository, copy or symlink the full `skills/` directory contents into `~/.codex/skills`, not only the two base skills.
 
 ## How To Use
+
+Use the clickable prompt template for best results:
+
+- [prompts/templates/dave-cloud-pod-advisor-prompt-template.md](/Users/stu2/Projects/dava-cva-agent/prompts/templates/dave-cloud-pod-advisor-prompt-template.md)
 
 Invoke the main advisor directly:
 
@@ -207,6 +234,59 @@ Use output-format skills when the deliverable format matters:
 - `Use $xlsx to build a migration wave tracker spreadsheet.`
 - `Use $pdf to extract and summarize case-study details from uploaded PDFs.`
 
+## Client Output Templates
+
+The repository now includes default branded templates for client-facing outputs:
+
+- [templates/Portrait-Word-Document-Template-Endava-2025.docx](/Users/stu2/Projects/dava-cva-agent/templates/Portrait-Word-Document-Template-Endava-2025.docx)
+- [templates/Endava-Minimal-Version.pptx](/Users/stu2/Projects/dava-cva-agent/templates/Endava-Minimal-Version.pptx)
+
+Dave should use these templates instead of Markdown files when generating final client documents or presentations.
+
+### Output rules
+
+- migration roadmaps, architectures, executive summaries, runbooks, and RAID logs should default to `.docx`
+- presentation outputs should default to `.pptx`
+- spreadsheets should still use `.xlsx` where appropriate
+- Markdown may still be used for internal working notes, but not as the primary final client deliverable when a template applies
+
+## Prompt Template
+
+For consistent high-quality prompts, use:
+
+- [prompts/templates/dave-cloud-pod-advisor-prompt-template.md](/Users/stu2/Projects/dava-cva-agent/prompts/templates/dave-cloud-pod-advisor-prompt-template.md)
+
+This template tells users exactly what context to provide:
+
+- client and industry
+- objective
+- estate size and dependencies
+- target cloud and operating model
+- constraints and risks
+- required deliverables
+- specialist-skill and template instructions
+
+## Deliverable Selection Checklist
+
+Dave supports a checklist-based output selection process for client deliverables.
+
+Use [deliverables/output-selection-checklist.md](/Users/stu2/Projects/dava-cva-agent/deliverables/output-selection-checklist.md) to choose:
+
+- all standard deliverables
+- only selected deliverables
+
+### Standard usage
+
+- If you want everything: check `Generate all standard deliverables`
+- If you want only some outputs: check `Generate only the selected deliverables below` and tick only those items
+- Dave will map those selections to template-based `.docx` and `.pptx` outputs where applicable
+
+### Example prompt
+
+```text
+Use $dave-cloud-pod-advisor for Enshite plc and generate only the checked outputs from deliverables/output-selection-checklist.md.
+```
+
 ## Add Your Own Cloud Advisory Skills
 
 Dave is designed to be extensible. Install your own skills into `~/.codex/skills`, then register them in [skills/dave-cloud-pod-advisor/references/custom-skill-imports.md](/Users/stu2/Projects/dava-cva-agent/skills/dave-cloud-pod-advisor/references/custom-skill-imports.md).
@@ -273,4 +353,5 @@ dava-cva-agent/
 - Endava case-study quality depends on the knowledge sources you make available.
 - Custom skills are optional overlays; the main advisor remains the primary interface.
 - Future changes should be recorded in [RELEASE_NOTES.md](/Users/stu2/Projects/dava-cva-agent/RELEASE_NOTES.md) with both a release note and a changed summary.
+- Every release should also be added to the `Releases` section near the top of this README with a direct link to its release note entry.
 - Several Azure specialist skills note that they require network-backed documentation access when used interactively.
